@@ -1,0 +1,57 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login Page</title>
+
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <div class="container" style="margin-top: 10%">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header">Login Form</div>
+                    <div class="card-body">
+                        <form action="@Url.Action("Index")" method="post">
+                            <div class="form-group row">
+                                <label class="col-md-4 col-form-label text-md-right">Identifier</label>
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" name="id" placeholder="your id" value="1" required autofocus>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-md-4 col-form-label text-md-right">Password</label>
+                                <div class="col-md-6">
+                                    <input type="password" class="form-control" name="passw" placeholder="your password" value="123" required>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-md-6 offset-md-4">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" name="remember" checked=""> Remember Me
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 offset-md-4">
+                                <button type="submit" class="btn btn-primary">
+                                    Login
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
